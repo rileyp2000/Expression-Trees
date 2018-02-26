@@ -8,6 +8,6 @@
  * @author rileyp
  *
  */
-public class ExpressionTrees {
+public class ExpressionTrees extends TreeNode implements Expressions {
 
 }
