@@ -9,5 +9,8 @@
  *
  */
 public class ExpressionTrees extends TreeNode implements Expressions {
-
+	
+	public ExpressionTrees(Object initValue, TreeNode initLeft, TreeNode initRight) {
+		super(initValue,initLeft,initRight);
+	}
 }
