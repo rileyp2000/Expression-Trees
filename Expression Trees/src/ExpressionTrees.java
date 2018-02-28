@@ -11,7 +11,13 @@ import java.util.Stack;
  *
  */
 public class ExpressionTrees extends TreeNode implements Expressions {
-
+	
+	/**
+	 * 
+	 * @param initValue value of the root
+	 * @param initLeft node to the left
+	 * @param initRight node to the right
+	 */
 	public ExpressionTrees(Object initValue, TreeNode initLeft, TreeNode initRight) {
 		super(initValue, initLeft, initRight);
 	}
@@ -93,7 +99,7 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 
 	@Override
 	public int postfixEval(String[] exp) {
-		// TODO Auto-generated method stub
-		return 0;
+		TreeNode n = buildTree(exp);
+		return ((ExpressionTrees)n).evalTree();
 	}
 }
