@@ -24,6 +24,18 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 	public ExpressionTrees(Object initValue, TreeNode initLeft, TreeNode initRight) {
 		super(initValue, initLeft, initRight);
 	}
+	
+	public ExpressionTrees(String s) {
+		super("");
+		String[] exp = this.processInput(s);
+		/*for(String ss : exp)
+			System.out.println(ss);*/
+		buildTree(exp);
+	}
+	
+	public ExpressionTrees(int i) {
+		super(i, null, null);
+	}
 
 	@Override
 	public TreeNode buildTree(String[] exp) {
@@ -31,8 +43,8 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 
 		for (String o : exp) {
 			try {
-				Integer.parseInt(o);
-				s.push(new ExpressionTrees(o, null, null));
+				int i = Integer.parseInt(o);
+				s.push(new ExpressionTrees(i));
 			} catch (NumberFormatException e) {
 				ExpressionTrees r = new ExpressionTrees(o, s.pop(), s.pop());
 				s.push(r);
@@ -55,6 +67,7 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 			else {
 				int left = recurEval(r.getLeft());
 				int right = recurEval(r.getRight());
+				
 				if (r.getValue().equals("*"))
 					return left * right;
 				else
