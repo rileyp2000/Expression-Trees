@@ -11,12 +11,15 @@ import java.util.Stack;
  *
  */
 public class ExpressionTrees extends TreeNode implements Expressions {
-	
+
 	/**
 	 * 
-	 * @param initValue value of the root
-	 * @param initLeft node to the left
-	 * @param initRight node to the right
+	 * @param initValue
+	 *            value of the root
+	 * @param initLeft
+	 *            node to the left
+	 * @param initRight
+	 *            node to the right
 	 */
 	public ExpressionTrees(Object initValue, TreeNode initLeft, TreeNode initRight) {
 		super(initValue, initLeft, initRight);
@@ -47,7 +50,7 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 		if (r == null)
 			return 0;
 		else {
-			if (r.getLeft() == null && r.getRight() == null)
+			if (r.getLeft() == null || r.getRight() == null)
 				return Integer.parseInt((String) r.getValue());
 			else {
 				int left = recurEval(r.getLeft());
@@ -63,7 +66,7 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 
 	@Override
 	public String toPrefixNotation() {
-		if (this != null) {
+		if (this.getLeft() != null || this.getRight() != null) {
 			String ret = (String) getValue();
 			String left = ((ExpressionTrees) this.getLeft()).toPrefixNotation();
 			String right = ((ExpressionTrees) this.getRight()).toPrefixNotation();
@@ -75,21 +78,20 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 
 	@Override
 	public String toInfixNotation() {
-		if (this != null) {
+		if (this.getLeft() != null || this.getRight() != null) {
 			String ret = "(";
 			ret += (String) ((ExpressionTrees) this.getLeft()).toInfixNotation();
 			ret += (String) this.getValue();
 			ret += (String) ((ExpressionTrees) this.getRight()).toInfixNotation();
 			return ret + ")";
-		}
-		else
+		} else
 			return "";
 
 	}
 
 	@Override
 	public String toPostfixNotation() {
-		if (this != null) {
+		if (this.getLeft() != null || this.getRight() != null) {
 			String left = ((ExpressionTrees) this.getLeft()).toPostfixNotation();
 			String right = ((ExpressionTrees) this.getRight()).toPostfixNotation();
 			return left + right + (String) this.getValue();
@@ -100,6 +102,20 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 	@Override
 	public int postfixEval(String[] exp) {
 		TreeNode n = buildTree(exp);
-		return ((ExpressionTrees)n).evalTree();
+		return ((ExpressionTrees) n).evalTree();
 	}
+
+	/**
+	 * 
+	 * Processing the input string to get the array of operators and operands
+	 * 
+	 * @param s
+	 *            the postfix notation string
+	 * @return String[] the split string in postfix notation
+	 *
+	 */
+	public String[] processInput(String s) {
+		return s.split(" ");
+	}
+
 }
