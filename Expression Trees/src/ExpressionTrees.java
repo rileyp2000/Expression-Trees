@@ -72,7 +72,19 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 				if (r.getValue().equals("*"))
 					return left * right;
 				else
-					return left + right;
+					if(r.getValue().equals("+"))
+						return left + right;
+					else
+						if(r.getValue().equals("-"))
+							return left - right;
+						else
+							if(r.getValue().equals("/")) {
+								if(right == 0)
+									throw new ArithmeticException();
+								return left / right;
+							}
+							else
+								return left % right;
 			}
 		}
 
