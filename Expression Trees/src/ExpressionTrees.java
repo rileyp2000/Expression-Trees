@@ -64,7 +64,7 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 			return 0;
 		else {
 			if (r.getLeft() == null && r.getRight() == null)
-				return Integer.parseInt((String) r.getValue());
+				return Integer.parseInt(r.getValue().toString());
 			else {
 				int left = recurEval(r.getLeft());
 				int right = recurEval(r.getRight());
@@ -81,25 +81,25 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 	@Override
 	public String toPrefixNotation() {
 		if (this.getLeft() != null || this.getRight() != null) {
-			String ret = (String) getValue();
+			String ret = getValue().toString();
 			String left = ((ExpressionTrees) this.getLeft()).toPrefixNotation();
 			String right = ((ExpressionTrees) this.getRight()).toPrefixNotation();
-			return ret + left + right;
+			return ret + " " + left + " " + right + " ";
 		} else
-			return "";
+			return getValue().toString();
 
 	}
 
 	@Override
 	public String toInfixNotation() {
 		if (this.getLeft() != null || this.getRight() != null) {
-			String ret = "(";
-			ret += (String) ((ExpressionTrees) this.getLeft()).toInfixNotation();
-			ret += (String) this.getValue();
+			String ret = "( ";
+			ret += ((String) ((ExpressionTrees) this.getLeft()).toInfixNotation()) + " ";
+			ret += ((String) this.getValue()) + " ";
 			ret += (String) ((ExpressionTrees) this.getRight()).toInfixNotation();
-			return ret + ")";
+			return ret + " ) ";
 		} else
-			return "";
+			return getValue().toString();
 
 	}
 
@@ -108,9 +108,9 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 		if (this.getLeft() != null || this.getRight() != null) {
 			String left = ((ExpressionTrees) this.getLeft()).toPostfixNotation();
 			String right = ((ExpressionTrees) this.getRight()).toPostfixNotation();
-			return left + right + (String) this.getValue();
+			return left + " " + right + " " +(String) this.getValue() + " ";
 		} else
-			return "";
+			return getValue().toString();
 	}
 
 	@Override
