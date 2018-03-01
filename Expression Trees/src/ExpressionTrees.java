@@ -28,13 +28,14 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 	public ExpressionTrees(String s) {
 		super("");
 		String[] exp = this.processInput(s);
-		/*for(String ss : exp)
-			System.out.println(ss);*/
-		buildTree(exp);
+		TreeNode n = buildTree(exp);
+		this.setLeft(n.getLeft());
+		this.setRight(n.getRight());
+		this.setValue(n.getValue());
 	}
 	
 	public ExpressionTrees(int i) {
-		super(i, null, null);
+		super(i);
 	}
 
 	@Override
@@ -62,7 +63,7 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 		if (r == null)
 			return 0;
 		else {
-			if (r.getLeft() == null || r.getRight() == null)
+			if (r.getLeft() == null && r.getRight() == null)
 				return Integer.parseInt((String) r.getValue());
 			else {
 				int left = recurEval(r.getLeft());
