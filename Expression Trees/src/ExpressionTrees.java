@@ -104,15 +104,24 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 
 	@Override
 	public String toInfixNotation() {
+		String s = toInfixUnfixed();
+		return s.substring(1, s.length()-2);
+
+	}
+	
+	/**
+	 * This does infix notation, but does it with the exterior brackets
+	 * @return String the infix notation with the outer ()
+	 */
+	private String toInfixUnfixed(){
 		if (this.getLeft() != null || this.getRight() != null) {
 			String ret = "( ";
-			ret += ((String) ((ExpressionTrees) this.getLeft()).toInfixNotation()) + " ";
+			ret += ((String) ((ExpressionTrees) this.getLeft()).toInfixUnfixed()) + " ";
 			ret += ((String) this.getValue()) + " ";
-			ret += (String) ((ExpressionTrees) this.getRight()).toInfixNotation();
+			ret += (String) ((ExpressionTrees) this.getRight()).toInfixUnfixed();
 			return ret + " ) ";
 		} else
 			return getValue().toString();
-
 	}
 
 	@Override
