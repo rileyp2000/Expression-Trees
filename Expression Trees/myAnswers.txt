@@ -1,0 +1,28 @@
+The tree equals: 22
+Prefix Notation: + * + + 1 5  3  2  4 
+Infix Notation:  ( ( ( 1 + 5 )  + 3 )  * 2 )  + 4 
+Postfix Notation: 1 5 +  3 +  2 *  4 + 
+postFixEval(): 22
+
+
+The tree equals: 4
+Prefix Notation: * 2 2 
+Infix Notation:  2 * 2 
+Postfix Notation: 2 2 * 
+postFixEval(): 4
+
+
+The tree equals: 27
+Prefix Notation: * 3 + 2 + 4 3   
+Infix Notation:  3 * ( 2 + ( 4 + 3 )  )  
+Postfix Notation: 3 2 4 3 +  +  * 
+postFixEval(): 27
+
+
+The tree equals: 110
+Prefix Notation: * 10 + 3 * 2 4   
+Infix Notation:  10 * ( 3 + ( 2 * 4 )  )  
+Postfix Notation: 10 3 2 4 *  +  * 
+postFixEval(): 110
+
+

@@ -95,6 +95,7 @@ public class ExpressionTreesTest {
 		System.out.println("Postfix Notation: " + n.toPostfixNotation());
 		System.out.println("Infix Notation: " + n.toInfixNotation());
 	*/
+		out.close();
 	}
 
 }
