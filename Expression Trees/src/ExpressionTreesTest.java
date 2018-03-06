@@ -57,6 +57,16 @@ public class ExpressionTreesTest {
 		return expressions;
 	}
 	
+	public static void printFormat(PrintWriter out, ExpressionTrees tr, String ex){
+		out.println("The tree equals: " + tr.evalTree());
+		out.println("Prefix Notation: " + tr.toPrefixNotation());
+		out.println("Infix Notation: " + tr.toInfixNotation());
+		out.println("Postfix Notation: " + tr.toPostfixNotation());
+		out.println("postFixEval(): " + tr.postfixEval(tr.processInput(ex)));
+		out.println();
+		out.println();
+	}
+	
 	public static void main(String[] args) {
 		PrintWriter out = null;
 		try {
@@ -70,11 +80,7 @@ public class ExpressionTreesTest {
 		
 		for(String ex : expr){
 			ExpressionTrees tr = new ExpressionTrees(ex);
-			out.println("The tree equals: " + tr.evalTree());
-			out.println("Prefix Notation: " + tr.toPrefixNotation());
-			out.println("Infix Notation: " + tr.toInfixNotation());
-			out.println("Postfix Notation: " + tr.toPostfixNotation());
-			out.println("postFixEval(): " + tr.postfixEval(tr.processInput(ex)));
+			printFormat(out,tr,ex);
 		}
 		
 		
