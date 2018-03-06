@@ -1,3 +1,8 @@
+/**
+ * This is the Provided Interface for the Expression Trees Assignment
+ * @author rileyp
+ *
+ */
 public interface Expressions {
 
 /**

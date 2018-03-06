@@ -1,14 +1,9 @@
 import java.util.Stack;
 
 /**
- * <p></p> 
+ * <p>This Class Represents an Expression Tree, and has methods to evaluate its value and convert it to various notations</p> 
  * Feb 26, 2018
  * @author Patrick Riley
- */
-
-/**
- * @author rileyp
- *
  */
 public class ExpressionTrees extends TreeNode implements Expressions {
 
@@ -25,6 +20,10 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 		super(initValue, initLeft, initRight);
 	}
 	
+	/**
+	 * This creates a tree based on a postfix 
+	 * @param s The PostFix notation String used to build the Expression Tree
+	 */
 	public ExpressionTrees(String s) {
 		super("");
 		String[] exp = this.processInput(s);
@@ -34,6 +33,10 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 		this.setValue(n.getValue());
 	}
 	
+	/**
+	 * Creates a node with no children
+	 * @param i the Integer value to store in the node
+	 */
 	public ExpressionTrees(int i) {
 		super(i);
 	}
@@ -58,16 +61,27 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 	public int evalTree() {
 		return recurEval(this);
 	}
-
+	
+	/**
+	 * This recursively evaluates an Expression Tree
+	 * @param r The Node to evaluate
+	 * @return int the numerical value of the tree
+	 *
+	 */
 	private int recurEval(TreeNode r) {
+		//base case
 		if (r == null)
 			return 0;
 		else {
+			//if no children, return value
 			if (r.getLeft() == null && r.getRight() == null)
 				return Integer.parseInt(r.getValue().toString());
 			else {
+				//value of left and right children
 				int left = recurEval(r.getLeft());
 				int right = recurEval(r.getRight());
+				
+				//If an operator, find out which it is and go from there
 				
 				if (r.getValue().equals("*"))
 					return left * right;
@@ -80,7 +94,7 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 						else
 							if(r.getValue().equals("/")) {
 								if(right == 0)
-									throw new ArithmeticException();
+									return Integer.MAX_VALUE;
 								return left / right;
 							}
 							else
