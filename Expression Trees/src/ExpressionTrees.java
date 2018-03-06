@@ -50,7 +50,9 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 				int i = Integer.parseInt(o);
 				s.push(new ExpressionTrees(i));
 			} catch (NumberFormatException e) {
-				ExpressionTrees r = new ExpressionTrees(o, s.pop(), s.pop());
+				ExpressionTrees r = new ExpressionTrees(o);//,s.pop(),s.pop());
+				r.setRight(s.pop());
+				r.setLeft(s.pop());
 				s.push(r);
 			}
 		}
