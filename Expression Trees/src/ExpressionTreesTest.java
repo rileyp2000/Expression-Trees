@@ -47,7 +47,9 @@ public class ExpressionTreesTest {
 		ArrayList<String> expressions = new ArrayList<String>();
 
 		while (allExpressions.hasNextLine()) {
-			expressions.add(allExpressions.nextLine().trim());
+			String s = allExpressions.nextLine();
+			if(!s.equals(""))
+				expressions.add(s.trim());
 		}
 		
 		//closes up scanners
@@ -58,7 +60,7 @@ public class ExpressionTreesTest {
 	}
 	
 	public static void printFormat(PrintWriter out, ExpressionTrees tr, String ex){
-		out.println("The tree equals: " + tr.evalTree());
+		out.println("The Expression Tree equals: " + tr.evalTree());
 		out.println("Prefix Notation: " + tr.toPrefixNotation());
 		out.println("Infix Notation: " + tr.toInfixNotation());
 		out.println("Postfix Notation: " + tr.toPostfixNotation());
