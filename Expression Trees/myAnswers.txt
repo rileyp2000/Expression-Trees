@@ -1,0 +1,42 @@
+The Expression Tree equals: 22
+Prefix Notation: + 4 * 2 + 3 + 5 1    
+Infix Notation:  4 + ( 2 * ( 3 + ( 5 + 1 )  )  )  
+Postfix Notation: 4 2 3 5 1 +  +  *  + 
+postFixEval(): 22
+
+
+The Expression Tree equals: 4
+Prefix Notation: * 2 2 
+Infix Notation:  2 * 2 
+Postfix Notation: 2 2 * 
+postFixEval(): 4
+
+
+The Expression Tree equals: 27
+Prefix Notation: * + + 3 4  2  3 
+Infix Notation:  ( ( 3 + 4 )  + 2 )  * 3 
+Postfix Notation: 3 4 +  2 +  3 * 
+postFixEval(): 27
+
+
+The Expression Tree equals: 110
+Prefix Notation: * + * 4 2  3  10 
+Infix Notation:  ( ( 4 * 2 )  + 3 )  * 10 
+Postfix Notation: 4 2 *  3 +  10 * 
+postFixEval(): 110
+
+
+The Expression Tree equals: 0
+Prefix Notation: * * + 4 0  2  0 
+Infix Notation:  ( ( 4 + 0 )  * 2 )  * 0 
+Postfix Notation: 4 0 +  2 *  0 * 
+postFixEval(): 0
+
+
+The Expression Tree equals: 2147483647
+Prefix Notation: / 1 0 
+Infix Notation:  1 / 0 
+Postfix Notation: 1 0 / 
+postFixEval(): 2147483647
+
+
