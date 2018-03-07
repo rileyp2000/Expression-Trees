@@ -41,6 +41,8 @@ public class ExpressionTreesTest {
 				System.out.println("File not Found!");
 				System.exit(1);
 			}
+			
+		keyboard.close();
 		}
 		
 		//Create list of file names in txt file
