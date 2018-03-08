@@ -151,8 +151,31 @@ public class ExpressionTrees extends TreeNode implements Expressions {
 
 	@Override
 	public int postfixEval(String[] exp) {
-		TreeNode n = buildTree(exp);
-		return ((ExpressionTrees) n).evalTree();
+		Stack<Integer> operators = new Stack<Integer>();
+		for (String o : exp) {
+			try {
+				int i = Integer.parseInt(o);
+				operators.push(i);
+			} catch (NumberFormatException e) {
+				switch(o) {
+				case "*":
+					operators.push(operators.pop() * operators.pop());
+					break;
+				case "/":
+					operators.push(operators.pop() / operators.pop());
+					break;
+				case "-":
+					operators.push(operators.pop() - operators.pop());
+					break;
+				case "%":
+					operators.push(operators.pop() % operators.pop());
+					break;
+				default:
+					operators.push(operators.pop() + operators.pop());
+				}
+			}
+		}
+		return operators.pop();
 	}
 
 	/**
