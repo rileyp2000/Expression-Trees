@@ -84,7 +84,7 @@ public class ExpressionTreesTest {
 		return expressions;
 	}
 	
-	public static void printFormat(PrintWriter out, ExpressionTrees tr, String ex){
+	public static void printFormat(PrintWriter out, ExpressionTree tr, String ex){
 		out.println("The Expression Tree equals: " + tr.evalTree());
 		out.println("Prefix Notation: " + tr.toPrefixNotation());
 		out.println("Infix Notation: " + tr.toInfixNotation());
@@ -109,7 +109,7 @@ public class ExpressionTreesTest {
 		out.println();
 
 		for(String ex : expr){
-			ExpressionTrees tr = new ExpressionTrees(ex);
+			ExpressionTree tr = new ExpressionTree(ex);
 			printFormat(out,tr,ex);
 		}
 		
