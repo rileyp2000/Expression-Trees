@@ -1,42 +1,254 @@
-The Expression Tree equals: 22
-Prefix Notation: + 4 * 2 + 3 + 5 1    
-Infix Notation:  4 + ( 2 * ( 3 + ( 5 + 1 )  )  )  
-Postfix Notation: 4 2 3 5 1 +  +  *  + 
-postFixEval(): 22
+ /$$      /$$           /$$                                                     /$$                     /$$$$$$$             /$$   /$$             
+| $$  /$ | $$          | $$                                                    | $$                    | $$__  $$           | $$  | $/             
+| $$ /$$$| $$  /$$$$$$ | $$  /$$$$$$$  /$$$$$$  /$$$$$$/$$$$   /$$$$$$        /$$$$$$    /$$$$$$       | $$  \ $$ /$$$$$$  /$$$$$$|_//$$$$$$$      
+| $$/$$ $$ $$ /$$__  $$| $$ /$$_____/ /$$__  $$| $$_  $$_  $$ /$$__  $$      |_  $$_/   /$$__  $$      | $$$$$$$/|____  $$|_  $$_/  /$$_____/      
+| $$$$_  $$$$| $$$$$$$$| $$| $$      | $$  \ $$| $$ \ $$ \ $$| $$$$$$$$        | $$    | $$  \ $$      | $$____/  /$$$$$$$  | $$   |  $$$$$$       
+| $$$/ \  $$$| $$_____/| $$| $$      | $$  | $$| $$ | $$ | $$| $$_____/        | $$ /$$| $$  | $$      | $$      /$$__  $$  | $$ /$$\____  $$      
+| $$/   \  $$|  $$$$$$$| $$|  $$$$$$$|  $$$$$$/| $$ | $$ | $$|  $$$$$$$        |  $$$$/|  $$$$$$/      | $$     |  $$$$$$$  |  $$$$//$$$$$$$/      
+|__/     \__/ \_______/|__/ \_______/ \______/ |__/ |__/ |__/ \_______/         \___/   \______/       |__/      \_______/   \___/ |_______/       
+                                                                                                                                                   
+                                                                                                                                                   
+                                                                                                                                                   
+ /$$$$$$$$                                                            /$$                           /$$$$$$$$                                      
+| $$_____/                                                           |__/                          |__  $$__/                                      
+| $$       /$$   /$$  /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$$ /$$$$$$$ /$$  /$$$$$$  /$$$$$$$          | $$  /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$$ 
+| $$$$$   |  $$ /$$/ /$$__  $$ /$$__  $$ /$$__  $$ /$$_____//$$_____/| $$ /$$__  $$| $$__  $$         | $$ /$$__  $$ /$$__  $$ /$$__  $$ /$$_____/ 
+| $$__/    \  $$$$/ | $$  \ $$| $$  \__/| $$$$$$$$|  $$$$$$|  $$$$$$ | $$| $$  \ $$| $$  \ $$         | $$| $$  \__/| $$$$$$$$| $$$$$$$$|  $$$$$$  
+| $$        >$$  $$ | $$  | $$| $$      | $$_____/ \____  $$\____  $$| $$| $$  | $$| $$  | $$         | $$| $$      | $$_____/| $$_____/ \____  $$ 
+| $$$$$$$$ /$$/\  $$| $$$$$$$/| $$      |  $$$$$$$ /$$$$$$$//$$$$$$$/| $$|  $$$$$$/| $$  | $$         | $$| $$      |  $$$$$$$|  $$$$$$$ /$$$$$$$/ 
+|________/|__/  \__/| $$____/ |__/       \_______/|_______/|_______/ |__/ \______/ |__/  |__/         |__/|__/       \_______/ \_______/|_______/  
+                    | $$                                                                                                                           
+                    | $$                                                                                                                           
+                    |__/                                                                                                                           
+
+The Expression Tree equals: 12
+Prefix Notation: + 8 4 
+Infix Notation:  8 + 4 
+Postfix Notation: 8 4 + 
+postFixEval(): 12
 
 
-The Expression Tree equals: 4
-Prefix Notation: * 2 2 
-Infix Notation:  2 * 2 
-Postfix Notation: 2 2 * 
-postFixEval(): 4
+The Expression Tree equals: 48
+Prefix Notation: * 8 6 
+Infix Notation:  8 * 6 
+Postfix Notation: 8 6 * 
+postFixEval(): 48
 
 
-The Expression Tree equals: 27
-Prefix Notation: * + + 3 4  2  3 
-Infix Notation:  ( ( 3 + 4 )  + 2 )  * 3 
-Postfix Notation: 3 4 +  2 +  3 * 
-postFixEval(): 27
+The Expression Tree equals: 32
+Prefix Notation: + 8 * 4 6  
+Infix Notation:  8 + ( 4 * 6 )  
+Postfix Notation: 8 4 6 *  + 
+postFixEval(): 32
 
 
-The Expression Tree equals: 110
-Prefix Notation: * + * 4 2  3  10 
-Infix Notation:  ( ( 4 * 2 )  + 3 )  * 10 
-Postfix Notation: 4 2 *  3 +  10 * 
-postFixEval(): 110
+The Expression Tree equals: 38
+Prefix Notation: + * 8 4  6 
+Infix Notation:  ( 8 * 4 )  + 6 
+Postfix Notation: 8 4 *  6 + 
+postFixEval(): 38
 
 
-The Expression Tree equals: 0
-Prefix Notation: * * + 4 0  2  0 
-Infix Notation:  ( ( 4 + 0 )  * 2 )  * 0 
-Postfix Notation: 4 0 +  2 *  0 * 
-postFixEval(): 0
+The Expression Tree equals: 368
+Prefix Notation: * 8 + 4 * 6 7   
+Infix Notation:  8 * ( 4 + ( 6 * 7 )  )  
+Postfix Notation: 8 4 6 7 *  +  * 
+postFixEval(): 368
 
 
-The Expression Tree equals: 2147483647
-Prefix Notation: / 1 0 
-Infix Notation:  1 / 0 
-Postfix Notation: 1 0 / 
-postFixEval(): 2147483647
+The Expression Tree equals: 248
+Prefix Notation: * 8 + * 4 6  7  
+Infix Notation:  8 * ( ( 4 * 6 )  + 7 )  
+Postfix Notation: 8 4 6 *  7 +  * 
+postFixEval(): 248
+
+
+The Expression Tree equals: 224
+Prefix Notation: * + 8 * 4 6   7 
+Infix Notation:  ( 8 + ( 4 * 6 )  )  * 7 
+Postfix Notation: 8 4 6 *  +  7 * 
+postFixEval(): 224
+
+
+The Expression Tree equals: 416
+Prefix Notation: * * 8 4  + 6 7  
+Infix Notation:  ( 8 * 4 )  * ( 6 + 7 )  
+Postfix Notation: 8 4 *  6 7 +  * 
+postFixEval(): 416
+
+
+The Expression Tree equals: 266
+Prefix Notation: * + * 8 4  6  7 
+Infix Notation:  ( ( 8 * 4 )  + 6 )  * 7 
+Postfix Notation: 8 4 *  6 +  7 * 
+postFixEval(): 266
+
+
+The Expression Tree equals: 116
+Prefix Notation: + 8 * 4 + 6 * 7 3    
+Infix Notation:  8 + ( 4 * ( 6 + ( 7 * 3 )  )  )  
+Postfix Notation: 8 4 6 7 3 *  +  *  + 
+postFixEval(): 116
+
+
+The Expression Tree equals: 188
+Prefix Notation: + 8 * 4 + * 6 7  3   
+Infix Notation:  8 + ( 4 * ( ( 6 * 7 )  + 3 )  )  
+Postfix Notation: 8 4 6 7 *  3 +  *  + 
+postFixEval(): 188
+
+
+The Expression Tree equals: 146
+Prefix Notation: + 8 * + 4 * 6 7   3  
+Infix Notation:  8 + ( ( 4 + ( 6 * 7 )  )  * 3 )  
+Postfix Notation: 8 4 6 7 *  +  3 *  + 
+postFixEval(): 146
+
+
+The Expression Tree equals: 371
+Prefix Notation: + * 8 + 4 * 6 7    3 
+Infix Notation:  ( 8 * ( 4 + ( 6 * 7 )  )  )  + 3 
+Postfix Notation: 8 4 6 7 *  +  *  3 + 
+postFixEval(): 371
+
+
+The Expression Tree equals: 248
+Prefix Notation: + 8 * * 4 6  + 7 3   
+Infix Notation:  8 + ( ( 4 * 6 )  * ( 7 + 3 )  )  
+Postfix Notation: 8 4 6 *  7 3 +  *  + 
+postFixEval(): 248
+
+
+The Expression Tree equals: 101
+Prefix Notation: + 8 * + * 4 6  7  3  
+Infix Notation:  8 + ( ( ( 4 * 6 )  + 7 )  * 3 )  
+Postfix Notation: 8 4 6 *  7 +  3 *  + 
+postFixEval(): 101
+
+
+The Expression Tree equals: 251
+Prefix Notation: + * 8 + * 4 6  7   3 
+Infix Notation:  ( 8 * ( ( 4 * 6 )  + 7 )  )  + 3 
+Postfix Notation: 8 4 6 *  7 +  *  3 + 
+postFixEval(): 251
+
+
+The Expression Tree equals: 53
+Prefix Notation: + + 8 * 4 6   * 7 3  
+Infix Notation:  ( 8 + ( 4 * 6 )  )  + ( 7 * 3 )  
+Postfix Notation: 8 4 6 *  +  7 3 *  + 
+postFixEval(): 53
+
+
+The Expression Tree equals: 227
+Prefix Notation: + * + 8 * 4 6   7  3 
+Infix Notation:  ( ( 8 + ( 4 * 6 )  )  * 7 )  + 3 
+Postfix Notation: 8 4 6 *  +  7 *  3 + 
+postFixEval(): 227
+
+
+The Expression Tree equals: 92
+Prefix Notation: + * 8 4  * 6 + 7 3   
+Infix Notation:  ( 8 * 4 )  + ( 6 * ( 7 + 3 )  )  
+Postfix Notation: 8 4 *  6 7 3 +  *  + 
+postFixEval(): 92
+
+
+The Expression Tree equals: 71
+Prefix Notation: + * 8 4  * + 6 7  3  
+Infix Notation:  ( 8 * 4 )  + ( ( 6 + 7 )  * 3 )  
+Postfix Notation: 8 4 *  6 7 +  3 *  + 
+postFixEval(): 71
+
+
+The Expression Tree equals: 419
+Prefix Notation: + * * 8 4  + 6 7   3 
+Infix Notation:  ( ( 8 * 4 )  * ( 6 + 7 )  )  + 3 
+Postfix Notation: 8 4 *  6 7 +  *  3 + 
+postFixEval(): 419
+
+
+The Expression Tree equals: 59
+Prefix Notation: + + * 8 4  6  * 7 3  
+Infix Notation:  ( ( 8 * 4 )  + 6 )  + ( 7 * 3 )  
+Postfix Notation: 8 4 *  6 +  7 3 *  + 
+postFixEval(): 59
+
+
+The Expression Tree equals: 269
+Prefix Notation: + * + * 8 4  6  7  3 
+Infix Notation:  ( ( ( 8 * 4 )  + 6 )  * 7 )  + 3 
+Postfix Notation: 8 4 *  6 +  7 *  3 + 
+postFixEval(): 269
+
+
+The Expression Tree equals: 92
+Prefix Notation: + * 8 4  * 6 + 7 3   
+Infix Notation:  ( 8 * 4 )  + ( 6 * ( 7 + 3 )  )  
+Postfix Notation: 8 4 *  6 7 3 +  *  + 
+postFixEval(): 92
+
+
+The Expression Tree equals: 71
+Prefix Notation: + * 8 4  * + 6 7  3  
+Infix Notation:  ( 8 * 4 )  + ( ( 6 + 7 )  * 3 )  
+Postfix Notation: 8 4 *  6 7 +  3 *  + 
+postFixEval(): 71
+
+
+The Expression Tree equals: 419
+Prefix Notation: + * * 8 4  + 6 7   3 
+Infix Notation:  ( ( 8 * 4 )  * ( 6 + 7 )  )  + 3 
+Postfix Notation: 8 4 *  6 7 +  *  3 + 
+postFixEval(): 419
+
+
+The Expression Tree equals: 90
+Prefix Notation: + 8 + 4 * 6 + 7 * 3 2     
+Infix Notation:  8 + ( 4 + ( 6 * ( 7 + ( 3 * 2 )  )  )  )  
+Postfix Notation: 8 4 6 7 3 2 *  +  *  +  + 
+postFixEval(): 90
+
+
+The Expression Tree equals: 190
+Prefix Notation: + + 8 * 4 + * 6 7  3    2 
+Infix Notation:  ( 8 + ( 4 * ( ( 6 * 7 )  + 3 )  )  )  + 2 
+Postfix Notation: 8 4 6 7 *  3 +  *  +  2 + 
+postFixEval(): 190
+
+
+The Expression Tree equals: 60
+Prefix Notation: + 8 + + 4 * 6 7   * 3 2   
+Infix Notation:  8 + ( ( 4 + ( 6 * 7 )  )  + ( 3 * 2 )  )  
+Postfix Notation: 8 4 6 7 *  +  3 2 *  +  + 
+postFixEval(): 60
+
+
+The Expression Tree equals: 373
+Prefix Notation: + * 8 + 4 * 6 7    + 3 2  
+Infix Notation:  ( 8 * ( 4 + ( 6 * 7 )  )  )  + ( 3 + 2 )  
+Postfix Notation: 8 4 6 7 *  +  *  3 2 +  + 
+postFixEval(): 373
+
+
+The Expression Tree equals: 373
+Prefix Notation: + + * 8 + 4 * 6 7    3  2 
+Infix Notation:  ( ( 8 * ( 4 + ( 6 * 7 )  )  )  + 3 )  + 2 
+Postfix Notation: 8 4 6 7 *  +  *  3 +  2 + 
+postFixEval(): 373
+
+
+The Expression Tree equals: 148
+Prefix Notation: + 8 + * + 4 * 6 7   3  2  
+Infix Notation:  8 + ( ( ( 4 + ( 6 * 7 )  )  * 3 )  + 2 )  
+Postfix Notation: 8 4 6 7 *  +  3 *  2 +  + 
+postFixEval(): 148
+
+
+The Expression Tree equals: 148
+Prefix Notation: + + 8 * + 4 * 6 7   3   2 
+Infix Notation:  ( 8 + ( ( 4 + ( 6 * 7 )  )  * 3 )  )  + 2 
+Postfix Notation: 8 4 6 7 *  +  3 *  +  2 + 
+postFixEval(): 148
 
 
