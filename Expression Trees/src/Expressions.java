@@ -1,6 +1,6 @@
 /**
  * This is the Provided Interface for the Expression Trees Assignment
- * @author rileyp
+ * @author Terri Kelly; Edited by Patrick Riley
  *
  */
 public interface Expressions {
